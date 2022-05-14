@@ -13,7 +13,7 @@ char* getTime(char* buffer, int len, const char* fmt = "%d-%m-%Y %H:%M:%S") {
 
 Logger::Logger(bool log, Level level, const char* logPath) : logPath(logPath), verbosity(level)
 {
-    SetLogging(log);
+    SetFileLogging(log);
 }
 
 Logger::~Logger() {
@@ -22,9 +22,9 @@ Logger::~Logger() {
 }
 
 Level& Logger::Verbosity() { return verbosity; }
-bool Logger::IsLogging() { return log; }
+bool Logger::IsFileLogging() { return log; }
 
-void Logger::SetLogging(bool log) {
+void Logger::SetFileLogging(bool log) {
     this->log = log;
 
     if (!log) {
