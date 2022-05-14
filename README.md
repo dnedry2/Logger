@@ -1,5 +1,6 @@
 Simple cpp logger
 
+
 Example:
 ```
 Logger log = Logger(true, LogLevel::Debug, "out.log");
@@ -9,9 +10,10 @@ Prints:
 ```
 [main] Info: Hello world
 ```
+
 Set Verbosity:
 ```
-log.Verbosity() = Error;
+log.Verbosity() = LogLevel::Error;
 ```
 Enable file logging:
 ```
