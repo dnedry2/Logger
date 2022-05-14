@@ -14,7 +14,7 @@ Set Verbosity:
 ```
 log.Verbosity() = LogLevel::Error;
 ```
-Enable file logging:
+Enable logging to file:
 ```
 log.SetFileLogging(true);
 ```
