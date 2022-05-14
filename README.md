@@ -1,6 +1,19 @@
 Simple cpp logger
 
 Example:
-
+```
 Logger log = Logger(true, LogLevel::Debug, "out.log");
-Log<Warning>(&log, __func__, "Hello world");
+Log<Info>(&log, __func__, "Hello world");
+```
+Prints:
+```
+[main] Info: Hello world
+```
+Set Verbosity:
+```
+log.Verbosity() = Error;
+```
+Enable file logging:
+```
+log.SetFileLogging(true);
+```
